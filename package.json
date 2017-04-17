@@ -13,7 +13,11 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "prebuild": "npm run clean && npm run copy",
+    "clean": "rimraf release",
+    "copy": "cpy LICENSE package.json README.md release",
+    "build": "tsc -p tsconfig.json",
+    "deploy": "npm run build && cd ./release && npm publish"
   },
   "files": [
     "index.js"
