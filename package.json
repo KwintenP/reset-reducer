@@ -28,6 +28,9 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.17.0",
+    "cpy-cli": "1.0.1",
+    "nyc": "^10.0.0",
+    "typescript": "2.2.2",
     "xo": "^0.17.0"
   }
 }
