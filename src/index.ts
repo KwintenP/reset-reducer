@@ -1,7 +1,3 @@
-import {ActionReducer, Action} from "@ngrx/store";
-import {type} from "../util/util";
-import {ApplicationState} from "../state/ApplicationState";
-
 const actionTypes = {
 	RESET_STORE: type<"RESET_STORE">("RESET_STORE")
 };
