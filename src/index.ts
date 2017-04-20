@@ -1,13 +1,13 @@
 const actionTypes = {
-	RESET_STORE: type<"RESET_STORE">("RESET_STORE")
+	RESET_STORE: "RESET_STORE"
 };
 
-export class ResetStore implements Action {
+export class ResetStore {
 	type = actionTypes.RESET_STORE;
 }
 
-export function reset(reducer, initialState?: ApplicationState): ActionReducer<ApplicationState> {
-	return (state: ApplicationState, action: Action) => {
+export function reset(reducer, initialState) {
+	return (state, action) => {
 		if (action.type === actionTypes.RESET_STORE) {
 			return initialState;
 		}
