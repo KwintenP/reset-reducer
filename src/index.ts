@@ -6,6 +6,12 @@ export class ResetStore {
 	type = actionTypes.RESET_STORE;
 }
 
+export function resetStore(){
+	return {
+		type: actionTypes.RESET_STORE
+	};
+}
+
 export function reset(reducer, initialState) {
 	return (state, action) => {
 		if (action.type === actionTypes.RESET_STORE) {
