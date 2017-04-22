@@ -1,20 +1,17 @@
-const actionTypes = {
-	RESET_STORE: "RESET_STORE"
-};
-
+export const RESET_STORE = 'RESET_STPRE';
 export class ResetStore {
-	type = actionTypes.RESET_STORE;
+	type = RESET_STORE;
 }
 
 export function resetStore(){
 	return {
-		type: actionTypes.RESET_STORE
+		type: RESET_STORE
 	};
 }
 
 export function reset(reducer, initialState) {
 	return (state, action) => {
-		if (action.type === actionTypes.RESET_STORE) {
+		if (action.type === RESET_STORE) {
 			return initialState;
 		}
 		if (!initialState) {
